@@ -1,0 +1,79 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="PuntoVentaViews.Views.OrdenesView"
+			 xmlns:vm="using:PuntoVentaViews.ViewModels"
+			 x:DataType="vm:OrdenesViewModel"
+			 xmlns:wpf="clr-namespace:Material.Styles.Assists;assembly=Material.Styles"
+			 xmlns:controls="clr-namespace:Material.Styles.Controls;assembly=Material.Styles"
+			 xmlns:dialogHost="clr-namespace:DialogHostAvalonia;assembly=DialogHost.Avalonia"
+			 xmlns:data="using:CorePuntoVenta.Domain.Ordenes.Data"
+			 xmlns:clienteData="using:CorePuntoVenta.Domain.Clientes.Data">
+
+	<dialogHost:DialogHost IsOpen="{Binding OpenModal}" CornerRadius="8">
+		<dialogHost:DialogHost.DialogContent>
+			<StackPanel Width="450" MinHeight="500">
+				<TextBlock Text="Nueva orden" />
+				<AutoCompleteBox ItemsSource="{Binding Clientes}" SelectedItem="{Binding Cliente,Mode=TwoWay}" FilterMode="Contains">
+					<AutoCompleteBox.ItemTemplate>
+						<DataTemplate x:DataType="clienteData:ClienteData">
+							<TextBlock Text="{Binding RazonSocial}" />
+						</DataTemplate>
+					</AutoCompleteBox.ItemTemplate>
+				</AutoCompleteBox>
+				<Button Command="{Binding CancelarOrdenCommand}">Cancelar</Button>
+				<Button Command="{Binding GenerarOrdenCommand}">Crear Orden</Button>
+			</StackPanel>
+		</dialogHost:DialogHost.DialogContent>
+
+		<Border Padding="16,24">
+			<StackPanel>
+				<StackPanel Orientation="Horizontal">
+					<TextBlock Classes="Headline5">Ordenes</TextBlock>
+					<Button Command="{Binding AddOrderCommand}">Agregar orden</Button>
+				</StackPanel>
+				<ScrollViewer VerticalScrollBarVisibility="Auto" MaxHeight="560">
+					<ItemsRepeater ItemsSource="{Binding Ordenes}">
+						<ItemsRepeater.Layout>
+							<WrapLayout/>
+						</ItemsRepeater.Layout>
+						<ItemsRepeater.ItemTemplate>
+							<DataTemplate>
+								<controls:Card Margin="8" VerticalAlignment="Top">
+									<StackPanel>
+										<DockPanel>
+											<TextBlock
+												DockPanel.Dock="Left"
+												Classes="Headline6"
+												Text="{Binding Cliente.NombreComercial}" />
+											<TextBlock
+												DockPanel.Dock="Right"
+												Classes="Body1"
+												Text="{Binding EstatusOrden.Nombre}" Background="AliceBlue" />
+										</DockPanel>
+										<TextBlock Classes="Body2" Text="{Binding Id, StringFormat='#{0}'}" />
+										<StackPanel Orientation="Horizontal">
+											<TextBlock
+												Text="Total"/>
+											<TextBlock
+												Margin="0,12,0,0"
+												TextWrapping="Wrap"
+												Text="{Binding Total, StringFormat='${0}'}"/>
+										</StackPanel>
+										<StackPanel Orientation="Horizontal">
+											<Button Classes="Flat" Content="EDITAR" />
+											<Border Width="8" />
+											<Button Classes="Flat" Content="IMPRIMIR TICKET" />
+										</StackPanel>
+									</StackPanel>
+								</controls:Card>
+							</DataTemplate>
+						</ItemsRepeater.ItemTemplate>
+					</ItemsRepeater>
+				</ScrollViewer>
+			</StackPanel>
+		</Border>
+	</dialogHost:DialogHost>
+</UserControl>
