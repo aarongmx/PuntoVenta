@@ -27,7 +27,7 @@ namespace CorePuntoVenta.Domain.Cajas.Actions
                 throw new Exception("No hay efectivo suficiente para poder retirar!");
             }
 
-            if(String.IsNullOrWhiteSpace(itemCajaData.Motivo))
+            if(string.IsNullOrWhiteSpace(itemCajaData.Motivo))
             {
                 throw new Exception("Ingrese el motivo del retiro!");
             }

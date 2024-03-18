@@ -14,7 +14,7 @@ namespace CorePuntoVenta.Domain.Cajas.Actions
             using var transaction = context.Database.BeginTransaction();
             try
             {
-                ItemCaja? itemCaja = null;
+                ItemCaja? itemCaja = null; 
                 caja.EfectivoDisponible += itemCajaData.Monto;
 
                 itemCaja = _mapper.ToEntity(itemCajaData);

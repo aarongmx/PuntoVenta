@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using CorePuntoVenta.Domain.Direcciones.Data;
+using System.ComponentModel.DataAnnotations;
 
 namespace CorePuntoVenta.Domain.Clientes.Data
 {
@@ -6,13 +7,14 @@ namespace CorePuntoVenta.Domain.Clientes.Data
     {
         public int? Id { get; set; }
 
-        [Required]
-        [RegularExpression(@"^([A-ZÑa-zñ]|&){3,4}[0-9]{2}(0[1-9]|1[0-2])([12][0-9]|0[1-9]|3[01])[A-Za-z0-9]{3}$")]
         public string Rfc { get; set; }
 
-        [Required]
         public string RazonSocial { get; set; }
 
         public string? NombreComercial { get; set; }
+
+        public int DireccionId { get; set; }
+
+        public DireccionData? Direccion { get; set; }
     }
 }
