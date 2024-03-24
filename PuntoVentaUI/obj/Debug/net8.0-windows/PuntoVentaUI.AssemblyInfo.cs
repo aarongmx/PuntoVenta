@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PuntoVentaUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+121e965ce4126fbb3014c4330ef35a7903b839e5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8baaee268599593f7506e99fd563eec1c722e82e")]
 [assembly: System.Reflection.AssemblyProductAttribute("PuntoVentaUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PuntoVentaUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -46,9 +46,9 @@ namespace CorePuntoVenta
         {
         }
 
-        /*protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string connection = "Server=127.0.0.1;Port=5432;User ID=db_user;Password=s3cret;Database=punto";
+            string connection = "Server=127.0.0.1;Port=5432;User ID=postgres;Password=admin;Database=punto";
             NpgsqlDataSourceBuilder dataSourceBuilder = new(connection);
 
             dataSourceBuilder.UseNodaTime();
@@ -60,7 +60,7 @@ namespace CorePuntoVenta
                 .LogTo(Console.WriteLine, LogLevel.Information)
                 .EnableSensitiveDataLogging()
                 .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
-        }*/
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

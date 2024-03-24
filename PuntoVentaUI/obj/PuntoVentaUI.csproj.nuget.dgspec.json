@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aaron\\source\\repos\\PuntoVenta\\PuntoVentaUI\\PuntoVentaUI.csproj": {}
+    "C:\\Users\\ivan_\\source\\repos\\PuntoVenta\\PuntoVentaUI\\PuntoVentaUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aaron\\source\\repos\\PuntoVenta\\CorePuntoVenta\\CorePuntoVenta.csproj": {
+    "C:\\Users\\ivan_\\source\\repos\\PuntoVenta\\CorePuntoVenta\\CorePuntoVenta.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aaron\\source\\repos\\PuntoVenta\\CorePuntoVenta\\CorePuntoVenta.csproj",
+        "projectUniqueName": "C:\\Users\\ivan_\\source\\repos\\PuntoVenta\\CorePuntoVenta\\CorePuntoVenta.csproj",
         "projectName": "CorePuntoVenta",
-        "projectPath": "C:\\Users\\aaron\\source\\repos\\PuntoVenta\\CorePuntoVenta\\CorePuntoVenta.csproj",
-        "packagesPath": "C:\\Users\\aaron\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aaron\\source\\repos\\PuntoVenta\\CorePuntoVenta\\obj\\",
+        "projectPath": "C:\\Users\\ivan_\\source\\repos\\PuntoVenta\\CorePuntoVenta\\CorePuntoVenta.csproj",
+        "packagesPath": "C:\\Users\\ivan_\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ivan_\\source\\repos\\PuntoVenta\\CorePuntoVenta\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\aaron\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ivan_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -124,21 +129,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\aaron\\source\\repos\\PuntoVenta\\PuntoVentaUI\\PuntoVentaUI.csproj": {
+    "C:\\Users\\ivan_\\source\\repos\\PuntoVenta\\PuntoVentaUI\\PuntoVentaUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aaron\\source\\repos\\PuntoVenta\\PuntoVentaUI\\PuntoVentaUI.csproj",
+        "projectUniqueName": "C:\\Users\\ivan_\\source\\repos\\PuntoVenta\\PuntoVentaUI\\PuntoVentaUI.csproj",
         "projectName": "PuntoVentaUI",
-        "projectPath": "C:\\Users\\aaron\\source\\repos\\PuntoVenta\\PuntoVentaUI\\PuntoVentaUI.csproj",
-        "packagesPath": "C:\\Users\\aaron\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aaron\\source\\repos\\PuntoVenta\\PuntoVentaUI\\obj\\",
+        "projectPath": "C:\\Users\\ivan_\\source\\repos\\PuntoVenta\\PuntoVentaUI\\PuntoVentaUI.csproj",
+        "packagesPath": "C:\\Users\\ivan_\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ivan_\\source\\repos\\PuntoVenta\\PuntoVentaUI\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\aaron\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ivan_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -146,14 +155,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\aaron\\source\\repos\\PuntoVenta\\CorePuntoVenta\\CorePuntoVenta.csproj": {
-                "projectPath": "C:\\Users\\aaron\\source\\repos\\PuntoVenta\\CorePuntoVenta\\CorePuntoVenta.csproj"
+              "C:\\Users\\ivan_\\source\\repos\\PuntoVenta\\CorePuntoVenta\\CorePuntoVenta.csproj": {
+                "projectPath": "C:\\Users\\ivan_\\source\\repos\\PuntoVenta\\CorePuntoVenta\\CorePuntoVenta.csproj"
               }
             }
           }
@@ -172,6 +182,16 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.35, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -191,7 +211,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
